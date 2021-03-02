@@ -6,16 +6,34 @@ import styles from '../styles/pages/Ranking.module.css';
 
 const Ranking: React.FC = () => {
 
-  const {activeRouter} = useContext(RounterContext);
+  const { activeRouter } = useContext(RounterContext);
 
   useEffect(() => {
     activeRouter("/ranking");
-  },[])
+  }, [])
 
   return (
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <header>
+        
+      </header>
+      <main>
+        <RankingItem isTop3 />
         <RankingItem />
-      </div>
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+        <RankingItem />
+      </main>
+      <footer>
+      </footer>
+    </div>
   );
 }
 

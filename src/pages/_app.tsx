@@ -1,17 +1,20 @@
 
 import React from 'react';
 import SideBar from '../components/SideBar';
+import { RounterContextProvider } from '../contexts/RounterContext';
 import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <div style={{
-        display: 'flex'
-      }}>
-        <SideBar />
-        <Component {...pageProps} />
-      </div>
+     
+
+        <RounterContextProvider>
+          <div style={{ display: 'flex' }}>
+            <SideBar />
+            <Component {...pageProps} />
+          </div>
+        </RounterContextProvider>
     </>
   )
 }

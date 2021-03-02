@@ -1,15 +1,15 @@
-import React from "react";
 import { GetServerSideProps } from 'next';
-
+import Head from 'next/head';
+import React, { useContext, useEffect } from "react";
+import ChallengeBox from "../components/ChallengeBox";
 import CompletedChallenges from "../components/CompletedChallenges";
 import Countdown from "../components/Countdown";
 import ExperienceBar from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
-import Head from 'next/head';
-import styles from '../styles/pages/Home.module.css';
-import ChallengeBox from "../components/ChallengeBox";
 import CountdownProvider from "../contexts/CountdownContext";
-import { ChanllengesProvider } from "../contexts/ChallengeContext";
+import { RounterContext } from "../contexts/RounterContext";
+import styles from '../styles/pages/Home.module.css';
+
 
 
 interface HomeProps{
@@ -23,10 +23,18 @@ export default function Home({
   currentExperience,
   challengeCompleteds
 }: HomeProps) {
+
+  const {activeRouter} = useContext(RounterContext);
+
+  useEffect(() => {
+    activeRouter("/");
+  },[])
+
+
   return (
 
     <div className={styles.container}>
-      <ChanllengesProvider 
+   
         level={level}
         currentExperience={currentExperience}
         challengeCompleteds={challengeCompleteds}>
@@ -49,7 +57,7 @@ export default function Home({
             </div>
           </section>
         </CountdownProvider>
-      </ChanllengesProvider>
+      
     </div>
   )
 }

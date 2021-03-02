@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps }) {
       }}>
         <SideBar />
         <div style={{
-          gridArea:"CN",
           width: "90%"
         }}>
           <Component {...pageProps} />

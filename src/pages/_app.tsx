@@ -7,14 +7,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <div style={{
-        display:'flex'
+        display: 'flex'
       }}>
         <SideBar />
-        <div style={{
-          width: "90%"
-        }}>
-          <Component {...pageProps} />
-        </div>
+        <Component {...pageProps} />
       </div>
     </>
   )

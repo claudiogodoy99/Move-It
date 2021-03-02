@@ -1,13 +1,22 @@
 
 import React from 'react';
+import SideBar from '../components/SideBar';
 import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-     
-        <Component {...pageProps} />
-      
+      <div style={{
+        display:'flex'
+      }}>
+        <SideBar />
+        <div style={{
+          gridArea:"CN",
+          width: "90%"
+        }}>
+          <Component {...pageProps} />
+        </div>
+      </div>
     </>
   )
 }

@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+
+    background: var(--white);
+    box-shadow: 0 0 64px rgba(0,0,0,0.05);
+}

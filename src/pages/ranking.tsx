@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+import CompletedChallenges from '../components/CompletedChallenges';
+import { Profile } from '../components/Profile';
 import RankingItem from '../components/ProfileRanking';
 import { RounterContext, RounterContextProvider } from '../contexts/RounterContext';
 
@@ -15,7 +17,9 @@ const Ranking: React.FC = () => {
   return (
     <div className={styles.container}>
       <header>
-        
+        <div>
+          <Profile />
+        </div>
       </header>
       <main>
         <RankingItem isTop3 />
@@ -31,8 +35,6 @@ const Ranking: React.FC = () => {
         <RankingItem />
         <RankingItem />
       </main>
-      <footer>
-      </footer>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import CompletedChallenges from '../components/CompletedChallenges';
 import { Profile } from '../components/Profile';
 import RankingItem from '../components/ProfileRanking';
 import { RounterContext, RounterContextProvider } from '../contexts/RounterContext';
-
+import { FaSearch } from 'react-icons/fa';
 import styles from '../styles/pages/Ranking.module.css';
 
 const Ranking: React.FC = () => {
@@ -18,22 +18,24 @@ const Ranking: React.FC = () => {
     <div className={styles.container}>
       <header>
         <div>
-          <Profile />
+          <FaSearch />
+          <input type="input" placeholder="Encontre alguém">
+          </input>
         </div>
       </header>
       <main>
-        <RankingItem isTop3 />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
-        <RankingItem />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
+        <RankingItem profile={null} />
       </main>
     </div>
   );

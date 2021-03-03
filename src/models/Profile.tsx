@@ -2,7 +2,8 @@ export interface Profile{
     id: string,
     name: string,
     level: number,
-    experience: number,
+    currentExperience: number,
+    experienceToNextLevel: number,
     rankingPosition: number,
 }
 

@@ -24,18 +24,14 @@ const Ranking: React.FC = () => {
         </div>
       </header>
       <main>
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
-        <RankingItem profile={null} />
+        <RankingItem profile={{
+          id:'123',
+          currentExperience: 64,
+          experienceToNextLevel: 265,
+          level: 2,
+          name: 'Claudio Godoy',
+          rankingPosition: 1
+        }} />
       </main>
     </div>
   );

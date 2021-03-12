@@ -5,16 +5,19 @@ import { RounterContextProvider } from '../contexts/RounterContext';
 import '../styles/global.css';
 
 function MyApp({ Component, pageProps }) {
+
+  const logged = localStorage.getItem('token');
+
   return (
     <>
-     
 
-        <RounterContextProvider>
-          <div style={{ display: 'flex' }}>
-            <SideBar />
-            <Component {...pageProps} />
-          </div>
-        </RounterContextProvider>
+      {logged ? <RounterContextProvider>
+        <div style={{ display: 'flex' }}>
+          <SideBar />
+          <Component {...pageProps} />
+        </div>
+      </RounterContextProvider> : <Component {...pageProps} />}
+
     </>
   )
 }
